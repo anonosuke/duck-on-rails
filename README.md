@@ -1,24 +1,6 @@
-# README
+# duckdb + wasm rust + ruby on rails + mysql
+- メモ跡地
+  - https://scrapbox.io/opennosuke/duck_on_rails
+- importmapでやろうとしてduckdb-wasmが対応していないっぽく、バンドルしたものをローカルに置いて読んでみたいな事をしているが途中で心が折れてしまった
+- 普通にpackage.jsonを使う方向に倒して使ってみる涙
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

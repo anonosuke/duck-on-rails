@@ -1,0 +1,25 @@
+<h1>Hello DuckDB</h1>
+
+<script type="module">
+  import * as duckdb from "duck-db";
+
+  async function initializeDuckDB() {
+    try {
+      const db = new duckdb.AsyncDuckDB();
+      const worker = new Worker(
+        "/assets/duck-db-worker.js" // 実際のワーカースクリプトのパスを指定してください
+      );
+      await db.instantiate(worker);
+
+      console.log("DuckDB initialized successfully!");
+      // DuckDBのクエリを試す例
+      const connection = await db.connect();
+      const result = await connection.query("SELECT 'Hello, DuckDB!' AS message");
+      console.log(result.toArray());
+    } catch (error) {
+      console.error("Error initializing DuckDB:", error);
+    }
+  }
+
+  initializeDuckDB();
+</script>
